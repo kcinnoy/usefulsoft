@@ -8,13 +8,14 @@ export default class Table extends Component {
     }
     render() {
         const items = this.props.business_info.map((data) => {
+            let handleExpandItem = this.props.handleExpandItem.bind(this,data)
             return (
                 data.active ?  
-                <ActiveItem key={data.id} title={data.title} description={data.description}/>:
-                <Item key={data.id} title={data.title} description={data.description}/>
+                <ActiveItem handleExpandItem={handleExpandItem} key={data.id} title={data.title} description={data.description}/>:
+                <Item handleExpandItem={handleExpandItem} key={data.id} title={data.title} description={data.description}/>
             )
         })
-        
+
         return (
             <div className="pt-5 pb-b">
                 <div className="container">

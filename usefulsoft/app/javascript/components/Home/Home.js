@@ -16,11 +16,27 @@ class Home extends Component {
         }
     }
 
+    handleExpandItem(item, event){
+        event.preventDefault()
+
+        let business_info = [...this.state.business_info]
+    
+        business_info.map(data => {
+            data.active = false
+        })
+
+        item.active = !item.active
+
+        business_info[item.id -1] = item
+
+        this.setState({business_info})
+    }
+
     render() {
         return (
             <div>
                 <Jumbotron/>
-                <Table business_info={this.state.business_info}/>
+                <Table handleExpandItem={this.handleExpandItem.bind(this)} business_info={this.state.business_info}/>
             </div>
         )
     }

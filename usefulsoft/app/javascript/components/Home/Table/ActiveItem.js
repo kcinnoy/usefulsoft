@@ -25,7 +25,7 @@ const Button = styled.a
                 <div>
                     <div className="card px-5">
                         <div className="row">
-                            <div className="col-md-10 offset-md-1">
+                            <div className="col-md-10 offset-md-1 pt-4">
                                 <Vis/>
                                 <div className="pt-4 pb-4">
                                     <h4>{props.title}</h4>

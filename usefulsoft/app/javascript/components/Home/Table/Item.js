@@ -33,7 +33,7 @@ const Button = styled.a
                                     <h4>{props.title}</h4>
                                     <p>{props.description}</p>
                                     <div className="cta-wrapper">
-                                        <Button className="cta-btn">Explore</Button>
+                                        <Button onClick={props.handleExpandItem} className="cta-btn">Explore</Button>
                                     </div>
                                 </div>
                             </div>

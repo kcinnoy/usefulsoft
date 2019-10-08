@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Pholder = styled.img
     `
-    height:100%;
+    height:400px;
     width:100%;
     `
 
